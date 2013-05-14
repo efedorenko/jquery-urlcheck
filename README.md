@@ -1,0 +1,4 @@
+jquery-urlcheck
+===============
+
+jQuery.URLCheck
