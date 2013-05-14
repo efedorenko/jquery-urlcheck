@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>jQuery.URLCheck</title>
+
+	<link rel="stylesheet" href="demo.css">
+	<link rel="stylesheet" href="jquery.urlcheck.css">
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="jquery.urlcheck.js"></script>
+
+	<script>
+	$(document).ready(function() {
+
+		// Normal initialization
+
+		$('.form-url input[type="url"]').URLCheck();
+
+		// Use for URLCheck.convert() - type into one field and update another
+
+		$('#repository-title input').keyup(function () {
+			$('#repository-url input[type="url"]').val($(this).URLCheck('convert')).keyup();
+		});
+	});
+	</script>
+</head>
+
+<body>
+
+<div class="form-row">
+	<div class="form-label">
+		<label>Repository title</label>
+	</div>
+	<div class="form-field" id="repository-title">
+		<input type="text" size="35" data-allow-underscore="true" />
+	</div>
+</div>
+
+<div class="form-row form-url" id="repository-url">
+	<div class="form-label">
+		<label>Repository path</label>
+	</div>
+	<div class="form-field">
+		<input type="url" size="35" maxlength="35" data-allow-underscore="true">
+	</div>
+	<div class="form-text">
+		<div class="url-preview"><span class="url-preview-wrap">https://demo.git.beanstalkapp.com/<b class="url-input"></b>.git</span></div>
+	</div>
+	<div class="form-comment">
+		<p>Use only lowercase letters, numbers and dashes. Keep it short and simple.</p>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+body {
+	padding: 50px 20%;
+	color: #333;
+	font: normal 1em/1.5 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.form-row {
+	margin: .4em 0 2em;
+}
+	.form-label {
+		float: left;
+		width: 140px;
+		padding: .2em 0;
+	}
+
+	.form-field,
+	.form-text,
+	.form-comment {
+		margin: .5em 0 .5em 150px;
+	}
+		input {
+			padding: .3em;
+			font: 1em 'Helvetica Neue', Arial, Helvetica, sans-serif;
+		}
+
+	.form-comment {
+		color: #999;
+		font-size: .9em;
+	}
+		.form-comment p {
+			margin: 0;
+		}

@@ -1,0 +1,101 @@
+/* In-form validation */
+
+.field-ok,
+.field-error {
+	position: relative;
+	padding-right: 30px !important;
+}
+.field-ok::before,
+.field-error::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 7px;
+	margin: 0;
+}
+
+.field-ok::before {
+	width: 16px;
+	height: 16px;
+	margin-top: -8px;
+	background: url('i-checkmark-circle.svg') no-repeat;
+	background-size: 16px 16px;
+}
+.field-error {
+	border: 1px solid #DDB7B7;
+	-webkit-box-shadow: 0 0 3px rgba(187, 0, 0, 0.3);
+	-moz-box-shadow: 0 0 3px rgba(187, 0, 0, 0.3);
+	box-shadow: 0 0 3px rgba(187, 0, 0, 0.3);
+}
+.field-error::before {
+	margin-top: -7px;
+}
+
+/* Disabling Firefox field validation */
+
+input[type='url']:invalid {
+	box-shadow: none;
+}
+
+/* URLs validation */
+
+.url-preview {
+	position: relative;
+	height: 3em;
+	border: 1px solid #DDD;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #888;
+	font: 0.8em/1.5em Monaco, Consolas, "Lucida Console", "Courier New", Courier, monospace;
+	white-space: nowrap;
+	overflow: hidden;
+}
+	.url-preview-wrap {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		position: absolute;
+		right: 0;
+		min-width: 100%;
+		padding: .75em;
+	}
+		.url-input {
+			margin: 0 .3em;
+			-webkit-border-radius: 1px;
+			-moz-border-radius: 1px;
+			border-radius: 1px;
+			padding: .1em .4em;
+			background-color: #ffe586;
+			color: #000;
+			font-weight: normal;
+		}
+
+.form-error .url-preview {
+	border: 1px dashed #ccca9c;
+	background-color: #fffedd;
+	color: #999884;
+	cursor: pointer;
+}
+
+/* Errors Handling */
+
+.form-error {
+	padding: .4em 0;
+	background-color: #fff0e9;
+}
+	.form-error .form-label {
+		width: 130px;
+		padding-left: 10px;
+	}
+	.error-msg {
+		clear: both;
+		margin: 0;
+		padding: .4em 0;
+		font-size: .9em;
+		color: #990000;
+		font-weight: bold;
+	}
+		p.error-msg a.link-action {
+			color: #000;
+		}
