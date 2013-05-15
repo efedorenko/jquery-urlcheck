@@ -71,22 +71,16 @@ input[type='url']:invalid {
 			font-weight: normal;
 		}
 
-.form-error .url-preview {
-	border: 1px dashed #ccca9c;
-	background-color: #fffedd;
-	color: #999884;
-	cursor: pointer;
-}
-
 /* Errors Handling */
 
 .form-error {
-	padding: .4em 0;
 	background-color: #fff0e9;
 }
-	.form-error .form-label {
-		width: 130px;
-		padding-left: 10px;
+	.form-error .url-preview {
+		border: 1px dashed #ccca9c;
+		background-color: #fffedd;
+		color: #999884;
+		cursor: pointer;
 	}
 	.error-msg {
 		clear: both;
@@ -96,6 +90,3 @@ input[type='url']:invalid {
 		color: #990000;
 		font-weight: bold;
 	}
-		p.error-msg a.link-action {
-			color: #000;
-		}

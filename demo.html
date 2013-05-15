@@ -30,29 +30,88 @@
 
 <body>
 
-<div class="form-row">
-	<div class="form-label">
-		<label>Repository title</label>
-	</div>
-	<div class="form-field" id="repository-title">
-		<input type="text" size="35" data-allow-underscore="true" />
-	</div>
-</div>
+<fieldset>
+	<legend>Demo: Default</legend>
 
-<div class="form-row form-url" id="repository-url">
-	<div class="form-label">
-		<label>Repository path</label>
+	<div class="form-row form-url">
+		<div class="form-label">
+			<label>Repository path</label>
+		</div>
+		<div class="form-field">
+			<input type="url" size="35">
+		</div>
+		<div class="form-text">
+			<div class="url-preview"><span class="url-preview-wrap">https://demo.git.beanstalkapp.com/<b class="url-input"></b>.git</span></div>
+		</div>
+		<div class="form-comment">
+			<p>Use only lowercase letters, numbers, dashes.</p>
+		</div>
 	</div>
-	<div class="form-field">
-		<input type="url" size="35" maxlength="35" data-allow-underscore="true">
+
+</fieldset>
+
+<fieldset>
+	<legend>Demo: Limited to 35 characters</legend>
+
+	<div class="form-row form-url">
+		<div class="form-label">
+			<label>Repository path</label>
+		</div>
+		<div class="form-field">
+			<input type="url" size="35" maxlength="35">
+		</div>
+		<div class="form-text">
+			<div class="url-preview"><span class="url-preview-wrap">https://demo.git.beanstalkapp.com/<b class="url-input"></b>.git</span></div>
+		</div>
 	</div>
-	<div class="form-text">
-		<div class="url-preview"><span class="url-preview-wrap">https://demo.git.beanstalkapp.com/<b class="url-input"></b>.git</span></div>
+
+</fieldset>
+
+<fieldset>
+	<legend>Demo: Allow multiple dashes (can’t be last character) and underscores</legend>
+
+	<div class="form-row form-url">
+		<div class="form-label">
+			<label>Repository path</label>
+		</div>
+		<div class="form-field">
+			<input type="url" size="35" data-allow-underscore="true" data-allow-multiple-dashes="true">
+		</div>
+		<div class="form-text">
+			<div class="url-preview"><span class="url-preview-wrap">https://demo.git.beanstalkapp.com/<b class="url-input"></b>.git</span></div>
+		</div>
 	</div>
-	<div class="form-comment">
-		<p>Use only lowercase letters, numbers and dashes. Keep it short and simple.</p>
+
+</fieldset>
+
+<fieldset>
+	<legend>Demo: Get input from different source</legend>
+
+	<div class="form-row">
+		<div class="form-label">
+			<label>Repository title</label>
+		</div>
+		<div class="form-field" id="repository-title">
+			<input type="text" size="35" data-allow-underscore="true" />
+		</div>
 	</div>
-</div>
+
+	<div class="form-row form-url" id="repository-url">
+		<div class="form-label">
+			<label>Repository path</label>
+		</div>
+		<div class="form-field">
+			<input type="url" size="35">
+		</div>
+		<div class="form-text">
+			<div class="url-preview"><span class="url-preview-wrap">https://demo.git.beanstalkapp.com/<b class="url-input"></b>.git</span></div>
+		</div>
+		<div class="form-comment">
+			<p>Use only lowercase letters, numbers and dashes.</p>
+		</div>
+	</div>
+
+</fieldset>
 
 </body>
 </html>

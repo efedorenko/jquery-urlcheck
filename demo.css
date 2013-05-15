@@ -4,8 +4,19 @@ body {
 	font: normal 1em/1.5 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
+fieldset {
+	margin: 0 0 50px;
+	border: 1px solid #DDD;
+	padding: .5em 1em 1em;
+}
+	legend {
+		padding: 0 .5em;
+		color: #999;
+		font-size: .85em;
+	}
+
 .form-row {
-	margin: .4em 0 2em;
+	padding: .5em 1em;
 }
 	.form-label {
 		float: left;
